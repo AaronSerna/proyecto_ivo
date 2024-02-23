@@ -1,0 +1,21 @@
+<app-componente-botones-cabecera 
+
+[tituloCabecera]="'Modificar Cita - Sergio Gomis Sainz' "
+[botonRetroceder]="true"
+[botonCancelar]="true"
+[botonCrearCita]="false"
+[botonSalirPaciente]="false"
+></app-componente-botones-cabecera>
+
+<app-componente-caja-blanca 
+    [mostrarFormularioPrincipal]="false" 
+    [mostrarPasosFormulario]="false" 
+    [rutaProximoPaso]="'modificarCita/modificarCitaPaso2'"
+    [rutaAnteriorPaso]="'modificarCita'"
+
+    [mostrarBotonRetroceder]="true"
+    [mostrarComponenteMensajeAccion]="true"
+    [rutaBotonSi]="'modificarCita/confirmacionModificarCita'"
+    [rutaBotonCancelar]="'modificarCita'"
+
+></app-componente-caja-blanca>

@@ -1,0 +1,36 @@
+<div class="contenedor-general container-fluid">
+  <div class="popup">
+    <app-componente-popup-confirmar-salir></app-componente-popup-confirmar-salir>
+  </div>
+  <div class="row">
+    <div class="botonesCabecera col-md-6">
+      <app-componente-botones-cabecera [tituloCabecera]="'Diagnóstico de la cita'" [botonRetroceder]="true"
+        [botonCancelar]="false" [botonCrearCita]="false" [botonSalirPaciente]="false" [rutaRetroceder]="'/medico/inicio'">
+      </app-componente-botones-cabecera>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-around">
+    <div class="col-md-6 d-flex justify-content-between flex-column">
+      <div class="informacionPaciente">
+        <app-componente-caja-informacion-paciente></app-componente-caja-informacion-paciente>
+      </div>
+
+      <div class="historial d-flex justify-content-start">
+        <app-componente-historial-paciente></app-componente-historial-paciente>
+      </div>
+    </div>
+
+    <div class="diagnostico col-md-6 d-flex justify-content-end">
+      <app-componente-caja-diagnostico></app-componente-caja-diagnostico>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="botones col-md-11">
+      <app-componente-botones-diagnostico-medico [botonGenerarPDFAzul]="false"
+        [botonGuardar]="true" [botonEditarDiagn]="false" [botonGuardarEdicion]="false">
+      </app-componente-botones-diagnostico-medico>
+    </div>
+  </div>
+</div>

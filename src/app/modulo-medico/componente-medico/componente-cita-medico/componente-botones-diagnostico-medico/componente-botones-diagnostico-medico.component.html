@@ -1,0 +1,7 @@
+<div class="d-flex justify-content-end align-items-center">
+  <button (click)="presiona_boton_guardar()" *ngIf="botonGuardar==true" type="button"
+    class="btn guardar">Guardar</button>
+  <button (click)="presiona_boton_editar_diagn()" *ngIf="botonEditarDiagn==true" type="button" class="btn editar-diagn">Editar Diagnóstico</button>
+  <button *ngIf="botonGenerarPDFAzul==true" type="button" class="btn generar-pdf-azul">Generar PDF</button>
+  <button (click)="presiona_boton_guardar()" *ngIf="botonGuardarEdicion==true" type="button" class="btn guardar-edicion">Guardar edición</button>
+</div>

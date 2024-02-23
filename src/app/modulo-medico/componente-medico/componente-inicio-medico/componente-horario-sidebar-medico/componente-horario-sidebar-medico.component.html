@@ -1,0 +1,28 @@
+<div class="contenedor d-flex flex-column">
+  <mat-card class="horario">
+    <mat-calendar [(selected)]="selected" (selectedChange)="onDateSelected($event)"></mat-calendar>
+  </mat-card>
+  
+
+  <div class="contenedor-notas">
+    <h4>
+      {{selected?.getDate()}}
+      {{selected?.toLocaleDateString(undefined, { month: 'long' })}}
+      {{selected?.getFullYear()}}
+    </h4>
+    <div *ngIf="citasDelDiaSeleccionado!=null; else espera">
+      <div *ngFor="let cita of citasDelDiaSeleccionado" class="fila d-flex flex-row">
+        <img src="../../../../../assets/images/ImagenesMedico/linea-horario.svg" alt="">
+        <div class="horas d-flex flex-column justify-content-between">
+          <p>{{ mostrarHoraFormateada(cita.hora) }}</p>
+          <p>{{ sumarUnaHora(cita.hora) }}</p>
+        </div>
+        <div class="notas">
+          <h1>Numero Cita: {{cita.num_cita}}</h1>
+          <p>Paciente: {{cita.id_paciente}}</p>
+        </div>
+      </div>
+    </div>
+    <ng-template #espera><h3>Selecciona un dia donde haya una cita...</h3></ng-template>
+  </div>
+</div>

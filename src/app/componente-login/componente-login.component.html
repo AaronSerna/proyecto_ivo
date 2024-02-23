@@ -1,0 +1,52 @@
+<div class="row h-100">
+  <div class="col-md-4 bg-white d-flex flex-column justify-content-center align-center text-center">
+    <div class="formularioLogin">
+      <form (submit)="iniciarSesion()" method="post">
+        <div class="row iconoIvo d-flex justify-content-center align-center text-center">
+          <img src="../../assets/images/logotipoIvo.png" class="img-fluid" />
+        </div>
+
+        <br />
+
+        <div>
+          <label for="email" class="mb-2">Correo Electronico</label>
+          <br />
+          <input type="email" name="emailLogin" class="mb-3" />
+          <br />
+          <label for="contraseña" class="mb-2">Contraseña</label>
+          <br />
+          <div class="password-container">
+            <input [type]="contrasenaVisible ? 'text' : 'password'" [(ngModel)]="contrasenaUsuario" />
+            <img src="{{ rutaIcono }}" (click)="cambiarVisibilidadIcono()" />
+          </div>
+          <br />
+
+          <input type="submit" value="Iniciar Sesión" />
+        </div>
+
+        <br />
+
+        <div class="d-flex justify-content-evenly">
+          <div>
+            <input type="checkbox" name="recordarme" id="" />
+            <label for="recordarme" class="fs-6 mx-1"> Recordarme</label>
+          </div>
+          <div>
+            <a href="#">He olvidado la contraseña</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-md-8 fondoLoginPaciente h-100">
+    <div class="textoFondo text-light fw-bold" style=" margin-left: 90px; font-size: 60px;">
+      <p class="mt-5">Tu entrada, el inicio</p>
+      <p>hacia el bienestar</p>
+      <p>óptimo</p>
+    </div>
+    <img src="../../assets/images/ImagenesGenerales/fotoDoctorPaciente.svg" alt="" style="margin-left: 90px;">
+
+
+  </div>
+</div>

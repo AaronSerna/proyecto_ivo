@@ -1,0 +1,57 @@
+.iconoIvo img {
+  max-width: 30%;
+  height: auto;
+}
+
+.fondoLoginPaciente {
+  background: linear-gradient(138deg, #1f88fc 0%, #004fa7 100%);
+}
+
+label {
+  color: #9096aa;
+  font-weight: bold;
+  font-size: large;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]
+ {
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  height: 5vh;
+  width: 60%;
+}
+
+input[type="password"] {
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  height: 5vh;
+  width: 60%;
+}
+
+input[type="submit"] {
+  background-color: #4164e3;
+  font-weight: bold;
+  border-style: hidden;
+  color: white;
+  border-radius: 6px;
+  height: 5vh;
+  width: 50%;
+}
+
+a {
+  color: #5e7be7;
+  font-weight: bold;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container img {
+  position: absolute;
+  top: 42%;
+  right: 25%;
+  transform: translateY(-20%);
+}

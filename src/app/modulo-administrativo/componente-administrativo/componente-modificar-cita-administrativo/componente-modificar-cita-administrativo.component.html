@@ -1,0 +1,52 @@
+<div class="row">
+    <app-componente-botones-cabecera [tituloCabecera]="'Modificar Cita - ' + nombrePaciente" [botonRetroceder]="true"
+        [botonCancelar]="true" [botonCrearCita]="false" [botonSalirPaciente]="false"></app-componente-botones-cabecera>
+</div>
+
+<div class="row mt-2">
+
+    <div class="col-md-12 eliminacion p-5 d-flex flex-column align-center justify-content-center text-center">
+
+        <div class="d-flex w-100 align-items-center justify-content-center" style="height: 100px">
+            <div class="justify-content-center text-center align-center">
+                <h4 style="color: #3b82f6">
+                    Datos a modificar
+                </h4>
+                <p style="color: #9e9e9e">Modificacion de los datos de la cita</p>
+            </div>
+        </div>
+
+        <div class="pregunta d-flex flex-row justify-content-center" style="height: 400px;">
+
+            <form [formGroup]="formulario" (ngSubmit)="modificarCita()" #miFormulario="ngForm">
+                <!-- Fecha -->
+                <div class="form-group">
+                  <label for="fecha">Fecha<span class="ms-1 asterisco">*</span></label> <br>
+                  <input type="text" class="form-control" formControlName="fecha" placeholder="2024-02-01" >
+                </div>
+              
+                <!-- Hora -->
+                <div class="form-group">
+                  <label for="hora">Hora<span class="ms-1 asterisco">*</span></label><br>
+                  <input type="text" class="form-control" formControlName="hora" placeholder="10:30" >
+                </div>
+              
+                <!-- Médico -->
+                <!-- Médico -->
+                <div class="form-group">
+                    <label for="medico">Médico<span class="ms-1 asterisco">*</span></label>
+                    <select formControlName="medico" (ngModelChange)="guardarValueMedico($event)" class="form-select" id="medico" name="medico">
+                    <option disabled selected>Selecciona una opción</option>
+                    <option *ngFor="let medico of medicos" [ngValue]="medico">{{ medico.nombre_completo }}</option>
+                    </select>
+                </div>
+  
+              
+                <input type="submit" value="Continuar">
+              </form>
+              
+
+        </div>
+    </div>
+
+</div>

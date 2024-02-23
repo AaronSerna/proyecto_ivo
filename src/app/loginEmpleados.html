@@ -1,0 +1,116 @@
+<!-- 
+ESTE CÓDIGO CORRESPONDE AL LOGIN DE LOS EMPLEADOS. 
+HE PEGADO EL CÓDIGO AQUÍ SIMPLEMENTE PARA GUARDARLO EN ALGÚN SITIO
+Y UTILIZARLO DONDE CORRESPONDA EN SU MOMENTO.
+-->
+
+
+
+<div class="row h-100">
+
+
+    <div class="col-md-4 bg-white d-flex flex-column justify-content-center align-center text-center">
+  
+      <div class="row iconoIvo d-flex justify-content-center align-center text-center">
+        <img src="../../../assets/images/logotipoIvo.png" class="img-fluid">
+      </div>
+  
+      <br>
+  
+      <div>
+        <label for="numeroNIP" class="mb-2">Número Identificación</label>
+        <br>
+        <input type="text" class="mb-3">
+        <br>
+        <label for="contraseña" class="mb-2">Contraseña</label>
+        <br>
+        <div class="password-container">
+          <input type="password">
+        </div>
+        <br>
+  
+        <input type="submit" value="Iniciar Sesión">
+      </div>
+  
+      <br>
+  
+      <div class="d-flex justify-content-evenly">
+        <div>
+          <input type="checkbox" name="recordarme" id="">
+          <label for="recordarme" class="fs-6 mx-1"> Recordarme</label>
+        </div>
+        <div>
+          <a href="#">He olvidado la contraseña</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-8 fondoLoginPaciente">
+  
+    </div>
+  </div>
+  
+  
+  <style>
+    .iconoIvo img {
+      max-width: 30%;
+      height: auto;
+    }
+  
+    .fondoLoginPaciente {
+      background-image: url('../../../assets/images/ImagenesGenerales/fondoLoginEmpleados.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    label {
+      color: #9096AA;
+      font-weight: bold;
+      font-size: large;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      border: 1px solid #DADADA;
+      border-radius: 6px;
+      height: 5vh;
+      width: 60%;
+    }
+  
+  
+    input[type="password"] {
+      border: 1px solid #DADADA;
+      border-radius: 6px;
+      height: 5vh;
+      width: 60%;
+    }
+  
+    input[type="submit"] {
+      background-color: #4164E3;
+      font-weight: bold;
+      border-style: hidden;
+      color: white;
+      border-radius: 6px;
+      height: 5vh;
+      width: 50%;
+    }
+  
+    a {
+      color: #5E7BE7;
+      font-weight: bold;
+    }
+  
+    .password-container {
+      position: relative;
+    }
+  
+    .password-container::after {
+      content: url('../../../assets/images/ImagenesGenerales/iconoOjoCerradoLogin.svg');
+      position: absolute;
+      top: 42%;
+      right: 25%;
+      transform: translateY(-20%);
+    }
+  </style>

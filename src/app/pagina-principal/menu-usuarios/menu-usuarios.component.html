@@ -1,0 +1,22 @@
+<!-- Hacemos un bucle para añadir un div, una imagen y la ruta correspondiente a cada enlace -->
+
+<!--
+<div *ngFor="let enlace of titulos; let i = index" class="item">
+    <img [src]="imagenes[i]" alt="">
+    <p>
+        <a [routerLink]="['/' + obtenerRuta(enlace)]">{{enlace}}</a>
+    </p>
+</div>
+-->
+
+<div *ngFor="let enlace of titulos; let i = index" class="item">
+    <p>
+        <a [routerLink]="['/' + obtenerRuta(enlace)]">
+            <img [src]="imagenes[i]" alt="">  <br>
+            {{enlace}}
+          
+        </a>
+    </p>
+</div>
+
+
